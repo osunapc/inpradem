@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Hero from "../components/Hero.astro";
+import Avisos from "../components/Avisos.astro";
 ---
 
 <!doctype html>
@@ -13,8 +14,8 @@ import Hero from "../components/Hero.astro";
 	</head>
 	<body>
 		<Hero />
-		<Header />
-
+		<Header  logoUrl="/pclogo.svg"/>
+        <Avisos />
 		<Footer />
 	</body>
 </html>

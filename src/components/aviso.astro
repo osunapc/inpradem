@@ -1,0 +1,25 @@
+---
+import { SitemapItem } from "@astrojs/sitemap";
+
+interface props {
+    title: string,
+    txt: string,
+    link: string
+
+}
+const { title, txt, link } = Astro.props;
+--- 
+
+<swiper-slide class=" flex flex-col text-center cursor-pointer rounded-b-lg bg-blanco">
+			<header class="bg-naranja w-full m-0 p-2">
+				<h3 class="text-blanco font-bold">{title}</h3>
+			</header>
+			<main class="text-center h-10">
+				<p>{txt}</p>
+				<a
+					class="font-bold text-naranja"
+					target="_blank"
+					href=`${link}`>leer mas</a
+				>
+			</main>
+		</swiper-slide>

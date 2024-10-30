@@ -1,0 +1,52 @@
+---
+import Aviso from "./aviso.astro";
+---
+
+<section class="w-80% h-60 p-10">
+	<swiper-container
+		class="mySwiper w-full h-full"
+		init="false"
+		navigation="true"
+		pagination="true"
+	>
+		
+		<Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
+        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
+        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
+        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
+        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
+        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
+        
+		
+	</swiper-container>
+</section>
+
+<script>
+	import "swiper/css";
+	import { register } from "swiper/element/bundle";
+	register();
+
+	const swiperEl = document.querySelector("swiper-container");
+	Object.assign(swiperEl, {
+		slidesPerView: 1,
+		spaceBetween: 5,
+		pagination: {
+			clickable: true,
+		},
+		breakpoints: {
+			640: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 40,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 50,
+			},
+		},
+	});
+	swiperEl.initialize();
+</script>

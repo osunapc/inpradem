@@ -2,7 +2,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	
-	
-	
+			}
+body {
+	background-color: rgb(1, 11, 27);
+	color: white;
+	accent-color: rgb(244, 123, 25) ;
 }
