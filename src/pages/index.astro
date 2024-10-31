@@ -1,5 +1,5 @@
 ---
-import LayoutIndex from "../layouts/Layoutindex.astro";
+import LayoutIndex from "../Layouts/Layoutindex.astro";
 import Header from "../components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Hero from "../components/Hero.astro";
@@ -8,8 +8,8 @@ import Boletines from "../components/Boletines.astro";
 ---
 
 <LayoutIndex
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
+	title={SITE_TITLE}
+	description={SITE_DESCRIPTION}
 >
 	<Hero />
 	<Header logoUrl="/pclogo.svg" />

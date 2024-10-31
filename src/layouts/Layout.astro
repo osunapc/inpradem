@@ -1,13 +1,11 @@
 ---
-
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
-
+import Header from "../components/Header.astro";
 
 interface Props {
-title: string
-description: string
-
+	title: string;
+	description: string;
 }
 
 const { title, description } = Astro.props;
@@ -19,7 +17,7 @@ const { title, description } = Astro.props;
 	</head>
 
 	<body>
-		
+		<Header logoUrl="/pclogo.svg" />
 		<main>
 			<article>
 				<slot />
