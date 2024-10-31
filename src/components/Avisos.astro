@@ -1,5 +1,6 @@
 ---
 import Aviso from "./aviso.astro";
+import { avisos } from "../data/Avisos";
 ---
 
 <section class="w-80% h-60 p-10">
@@ -9,36 +10,11 @@ import Aviso from "./aviso.astro";
 		navigation="true"
 		pagination="true"
 	>
-		<Aviso
-			title="Sismos"
-			txt="Ultimos sismos en el estado merida"
-			link="http://www.funvisis.gob.ve/index.php"
-		/>
-		<Aviso
-			title="Sismos"
-			txt="Ultimos sismos en el estado merida"
-			link="http://www.funvisis.gob.ve/index.php"
-		/>
-		<Aviso
-			title="Sismos"
-			txt="Ultimos sismos en el estado merida"
-			link="http://www.funvisis.gob.ve/index.php"
-		/>
-		<Aviso
-			title="Sismos"
-			txt="Ultimos sismos en el estado merida"
-			link="http://www.funvisis.gob.ve/index.php"
-		/>
-		<Aviso
-			title="Sismos"
-			txt="Ultimos sismos en el estado merida"
-			link="http://www.funvisis.gob.ve/index.php"
-		/>
-		<Aviso
-			title="Sismos"
-			txt="Ultimos sismos en el estado merida"
-			link="http://www.funvisis.gob.ve/index.php"
-		/>
+		{
+			avisos.map((aviso) => {
+				return <Aviso title={aviso.titulo} txt={aviso.txt} link={aviso.link} />;
+			})
+		}
 	</swiper-container>
 </section>
 
