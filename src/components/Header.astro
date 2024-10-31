@@ -25,27 +25,22 @@ const socialIcons = [
 
 const navItems = [
 	{
-		title: "Products",
+		title: "Cordinacion",
+		items: [{ label: "Sistema Nacional de Protección Civil", href: "#" }],
+	},
+	{
+		title: "Lineas de ayuda",
 		items: [
-			{ label: "Product 1", href: "#" },
-			{ label: "Product 2", href: "#" },
-			{ label: "Product 3", href: "#" },
+			{ label: "0-800pcmerida", href: "#" },
+			{ label: "171", href: "#" },
 		],
 	},
 	{
-		title: "Services",
+		title: "Formacion",
 		items: [
-			{ label: "Service 1", href: "#" },
-			{ label: "Service 2", href: "#" },
-			{ label: "Service 3", href: "#" },
-		],
-	},
-	{
-		title: "About",
-		items: [
-			{ label: "Our Story", href: "#" },
-			{ label: "Team", href: "#" },
-			{ label: "Contact", href: "#" },
+			{ label: "UNES", href: "#" },
+			{ label: "Departamento de educacion", href: "#" },
+			{ label: "Cursos", href: "#" },
 		],
 	},
 ];
@@ -71,12 +66,25 @@ const navItems = [
 
 	<!-- Bottom Row with Details -->
 	<div class="container mx-auto px-4">
-		<div class="grid md:grid-cols-3 gap-4 py-2">
+		<div class="grid md:grid-cols-6 gap-1 py-2">
+			<a
+				class="list-none cursor-pointer py-2 px-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+				href="/">Inicio</a
+			>
+
 			{
 				navItems.map((item) => (
 					<NavDropdown title={item.title} items={item.items} />
 				))
 			}
+			<a
+				class="list-none cursor-pointer py-2 px-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+				href="/blog">blog</a
+			>
+			<a
+				class="list-none cursor-pointer py-2 px-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+				href="/about">Sobre Nosotros</a
+			>
 		</div>
 	</div>
 </nav>
