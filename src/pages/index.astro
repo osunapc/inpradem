@@ -1,23 +1,18 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import LayoutIndex from "../layouts/Layoutindex.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Hero from "../components/Hero.astro";
 import Avisos from "../components/Avisos.astro";
-import Boletines from "../components/boletines.astro";
+import Boletines from "../components/Boletines.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Hero />
-		<Header  logoUrl="/pclogo.svg"/>
-        <Avisos />
-		<Boletines />
-		<Footer />
-	</body>
-</html>
+<LayoutIndex
+	title="About Me"
+	description="Lorem ipsum dolor sit amet"
+>
+	<Hero />
+	<Header logoUrl="/pclogo.svg" />
+	<Avisos />
+	<Boletines />
+</LayoutIndex>

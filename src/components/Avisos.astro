@@ -9,33 +9,57 @@ import Aviso from "./aviso.astro";
 		navigation="true"
 		pagination="true"
 	>
-		
-		<Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
-        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
-        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
-        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
-        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
-        <Aviso title="Sismos" txt="Ultimos sismos en el estado merida" link="http://www.funvisis.gob.ve/index.php" />
-        
-		
+		<Aviso
+			title="Sismos"
+			txt="Ultimos sismos en el estado merida"
+			link="http://www.funvisis.gob.ve/index.php"
+		/>
+		<Aviso
+			title="Sismos"
+			txt="Ultimos sismos en el estado merida"
+			link="http://www.funvisis.gob.ve/index.php"
+		/>
+		<Aviso
+			title="Sismos"
+			txt="Ultimos sismos en el estado merida"
+			link="http://www.funvisis.gob.ve/index.php"
+		/>
+		<Aviso
+			title="Sismos"
+			txt="Ultimos sismos en el estado merida"
+			link="http://www.funvisis.gob.ve/index.php"
+		/>
+		<Aviso
+			title="Sismos"
+			txt="Ultimos sismos en el estado merida"
+			link="http://www.funvisis.gob.ve/index.php"
+		/>
+		<Aviso
+			title="Sismos"
+			txt="Ultimos sismos en el estado merida"
+			link="http://www.funvisis.gob.ve/index.php"
+		/>
 	</swiper-container>
 </section>
+<script
+	src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+></script>
 
 <script>
 	import "swiper/css";
 	import { register } from "swiper/element/bundle";
 	register();
 
-	const swiperEl = document.querySelector("swiper-container");
+	const swiperEl = document.querySelector(".mySwiper") as any;
 	Object.assign(swiperEl, {
 		slidesPerView: 1,
-		spaceBetween: 5,
+		spaceBetween: 10,
 		pagination: {
 			clickable: true,
 		},
 		breakpoints: {
 			640: {
-				slidesPerView: 1,
+				slidesPerView: 2,
 				spaceBetween: 20,
 			},
 			768: {
@@ -43,7 +67,7 @@ import Aviso from "./aviso.astro";
 				spaceBetween: 40,
 			},
 			1024: {
-				slidesPerView: 4,
+				slidesPerView: 5,
 				spaceBetween: 50,
 			},
 		},
