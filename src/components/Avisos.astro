@@ -41,25 +41,25 @@ import Aviso from "./aviso.astro";
 		/>
 	</swiper-container>
 </section>
-<script
-	src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
-></script>
 
 <script>
 	import "swiper/css";
 	import { register } from "swiper/element/bundle";
 	register();
 
-	const swiperEl = document.querySelector(".mySwiper") as any;
-	Object.assign(swiperEl, {
+	// Definimos el tipo para el elemento swiper
+	const swiperEl = document.querySelector("swiper-container") as any;
+
+	// Configuración del swiper
+	const swiperParams = {
 		slidesPerView: 1,
-		spaceBetween: 10,
+		spaceBetween: 5,
 		pagination: {
 			clickable: true,
 		},
 		breakpoints: {
 			640: {
-				slidesPerView: 2,
+				slidesPerView: 1,
 				spaceBetween: 20,
 			},
 			768: {
@@ -67,10 +67,15 @@ import Aviso from "./aviso.astro";
 				spaceBetween: 40,
 			},
 			1024: {
-				slidesPerView: 5,
+				slidesPerView: 4,
 				spaceBetween: 50,
 			},
 		},
-	});
+	};
+
+	// Asignamos los parámetros
+	Object.assign(swiperEl, swiperParams);
+
+	// Inicializamos el swiper
 	swiperEl.initialize();
 </script>
